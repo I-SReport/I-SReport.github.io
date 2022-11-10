@@ -1,12 +1,9 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
-import styles from '../../styles/Home.module.css';
+import styles from '../styles/Home.module.css';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { useEffect, useState } from 'react';
-import ARTICLES from '../../data/articles.json';
-import MiniArticle from '../../components/MiniArticle';
+import ARTICLES from '../data/articles.json';
 
 const fetcher = (url: string) =>
   fetch(url).then((res) => {
@@ -14,22 +11,21 @@ const fetcher = (url: string) =>
     return res.text();
   });
 
-export default function Article() {
+export default function Article(props: { articleName: string }) {
   const [article, setArticle] = useState<JSX.Element | undefined>(undefined);
   const [title, setTitle] = useState('');
   const [data, setData] = useState('');
   const [error, setError] = useState(false);
-
-  const router = useRouter();
+  const { articleName } = props;
 
   useEffect(() => {
     (async () => {
-      if (!router.query.article) return;
-      const res = await fetch(`/api/${router.query.article}`);
+      if (!articleName) return;
+      const res = await fetch(`/api/${articleName}`);
       if (!res.ok) setError(true);
       else setData(await res.text());
     })();
-  }, [router.query.article]);
+  }, [articleName]);
 
   useEffect(() => {
     (async () => {
@@ -47,12 +43,12 @@ export default function Article() {
 
   useEffect(() => {
     for (let article of ARTICLES) {
-      if (article.content == router.query.article) {
+      if (article.content == articleName) {
         setTitle(article.name);
         break;
       }
     }
-  }, [ARTICLES, router.query.article]);
+  }, [ARTICLES, articleName]);
 
   let inner = (
     <>
