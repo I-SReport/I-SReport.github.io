@@ -4,6 +4,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { useEffect, useState } from 'react';
 import ARTICLES from '../data/articles.json';
+import { Article } from '../utils/types';
 
 const fetcher = (url: string) =>
   fetch(url).then((res) => {
@@ -11,9 +12,9 @@ const fetcher = (url: string) =>
     return res.text();
   });
 
-export default function Article(props: { articleName: string }) {
+export default function ArticlePage(props: { articleName: string }) {
   const [article, setArticle] = useState<JSX.Element | undefined>(undefined);
-  const [title, setTitle] = useState('');
+  const [articleData, setArticleData] = useState<Article>();
   const [data, setData] = useState('');
   const [error, setError] = useState(false);
   const { articleName } = props;
@@ -44,7 +45,7 @@ export default function Article(props: { articleName: string }) {
   useEffect(() => {
     for (let article of ARTICLES) {
       if (article.content == articleName) {
-        setTitle(article.name);
+        setArticleData(article);
         break;
       }
     }
@@ -74,10 +75,13 @@ export default function Article(props: { articleName: string }) {
         </h3>
       </>
     );
-  else if (article && title) {
+  else if (article && articleData) {
     inner = (
       <>
-        <h2 style={{ marginTop: 0 }}>{title}</h2>
+        <h2 style={{ marginTop: 0 }}>{articleData.name}</h2>
+        <h4 style={{ marginTop: 0, color: '#555555' }}>
+          By: {articleData.author}
+        </h4>
         {article}
         <a
           href='/'
@@ -92,7 +96,7 @@ export default function Article(props: { articleName: string }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>The Issaquah-Sammamish Report</title>
+        <title>{articleData ? articleData.name : 'Loading...'}</title>
         <meta
           name='description'
           content='The Issaquah-Sammamish Report - "The truth is among us"'

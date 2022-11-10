@@ -3,4 +3,5 @@ export interface Article {
   content: string;
   brief: string;
   image: string;
+  author: string;
 }
