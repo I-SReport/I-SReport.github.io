@@ -21,7 +21,7 @@ export default function Article(props: { articleName: string }) {
   useEffect(() => {
     (async () => {
       if (!articleName) return;
-      const res = await fetch(`/api/${articleName}`);
+      const res = await fetch(`/articles/${articleName}.md`);
       if (!res.ok) setError(true);
       else setData(await res.text());
     })();
