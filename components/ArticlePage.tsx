@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { remark } from 'remark';
-import html from 'remark-html';
 import { useEffect, useState } from 'react';
 import ARTICLES from '../data/articles.json';
 import { Article } from '../utils/types';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const fetcher = (url: string) =>
   fetch(url).then((res) => {
@@ -13,7 +13,6 @@ const fetcher = (url: string) =>
   });
 
 export default function ArticlePage(props: { articleName: string }) {
-  const [article, setArticle] = useState<JSX.Element | undefined>(undefined);
   const [articleData, setArticleData] = useState<Article>();
   const [data, setData] = useState('');
   const [error, setError] = useState(false);
@@ -27,20 +26,6 @@ export default function ArticlePage(props: { articleName: string }) {
       else setData(await res.text());
     })();
   }, [articleName]);
-
-  useEffect(() => {
-    (async () => {
-      if (data) {
-        setArticle(
-          <div
-            dangerouslySetInnerHTML={{
-              __html: (await remark().use(html).process(data)).toString(),
-            }}
-          />
-        );
-      }
-    })();
-  }, [data]);
 
   useEffect(() => {
     for (let article of ARTICLES) {
@@ -75,14 +60,29 @@ export default function ArticlePage(props: { articleName: string }) {
         </h3>
       </>
     );
-  else if (article && articleData) {
+  else if (data && articleData) {
     inner = (
       <>
         <h2 style={{ marginTop: 0 }}>{articleData.name}</h2>
         <h4 style={{ marginTop: 0, color: '#555555' }}>
           By: {articleData.author}
         </h4>
-        {article}
+        <ReactMarkdown
+          children={data}
+          remarkPlugins={[remarkGfm]}
+          components={{
+            img({ node, className, children, ...props }) {
+              return (
+                <img
+                  className={`${className}`}
+                  {...props}
+                  referrerPolicy='no-referrer'
+                  style={{ width: '100%', padding: '0 1.5%' }}
+                />
+              );
+            },
+          }}
+        />
         <a
           href='/'
           style={{ color: '#0070f3', marginTop: '3rem', alignSelf: 'center' }}

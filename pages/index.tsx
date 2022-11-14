@@ -27,6 +27,7 @@ export default function Home() {
             style={{
               width: `${ARTICLES.length == 1 ? '10' : '5'}0%`,
               padding: '2rem',
+              paddingRight: '1rem',
             }}
           >
             <MainArticle article={ARTICLES[0]} />
@@ -35,6 +36,7 @@ export default function Home() {
             style={{
               width: `${ARTICLES.length == 1 ? '' : '5'}0%`,
               padding: '2rem',
+              paddingLeft: '1rem',
             }}
           >
             {ARTICLES.slice(1).map((a) => (

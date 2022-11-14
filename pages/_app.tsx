@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <footer className={styles.footer}>
         <span>© {year}</span>
-        <span style={{ opacity: 0.5, fontSize: '75%' }}>{footerCaption}</span>
+        <span style={{ opacity: 0.75, fontSize: '75%' }}>{footerCaption}</span>
       </footer>
     </>
   );
