@@ -64,7 +64,7 @@ export default function ArticlePage(props: { articleName: string }) {
     inner = (
       <>
         <h2 style={{ marginTop: 0 }}>{articleData.name}</h2>
-        <h4 style={{ marginTop: 0, color: '#555555' }}>
+        <h4 style={{ marginTop: 0, color: 'grey' }}>
           By: {articleData.author}
         </h4>
         <ReactMarkdown
@@ -73,12 +73,23 @@ export default function ArticlePage(props: { articleName: string }) {
           components={{
             img({ node, className, children, ...props }) {
               return (
-                <img
-                  className={`${className}`}
-                  {...props}
-                  referrerPolicy='no-referrer'
-                  style={{ width: '100%', padding: '0 1.5%' }}
-                />
+                <div
+                  style={{
+                    fontStyle: 'italic',
+                    color: 'grey',
+                    width: '100%',
+                    textAlign: 'center',
+                    padding: '0 1.5%',
+                  }}
+                >
+                  <img
+                    className={`${className}`}
+                    {...props}
+                    referrerPolicy='no-referrer'
+                    style={{ width: '100%' }}
+                  />
+                  {props.alt}
+                </div>
               );
             },
           }}

@@ -22,13 +22,15 @@ export default function Home() {
           <i>"The truth is among us"</i>
         </h3>
 
-        <div style={{ display: 'flex', width: '100%' }}>
+        <div className={styles.articleList}>
           <div
             style={{
               width: `${ARTICLES.length == 1 ? '10' : '5'}0%`,
               padding: '2rem',
               paddingRight: '1rem',
+              borderTop: '0 !important',
             }}
+            className={styles.articleSection}
           >
             <MainArticle article={ARTICLES[0]} />
           </div>
@@ -38,6 +40,7 @@ export default function Home() {
               padding: '2rem',
               paddingLeft: '1rem',
             }}
+            className={styles.articleSection}
           >
             {ARTICLES.slice(1).map((a) => (
               <MiniArticle article={a} />
