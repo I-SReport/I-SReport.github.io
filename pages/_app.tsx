@@ -18,12 +18,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta charSet='utf-8' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
         <meta
-          name='viewport'
-          content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'
+          name='keywords'
+          content='Issaquah, Sammamish, News, Report, The I-S Report, I-S, I-S Report'
         />
-        <meta name='description' content='Description' />
-        <meta name='keywords' content='Keywords' />
 
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#000000' />

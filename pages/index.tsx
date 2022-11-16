@@ -44,7 +44,7 @@ export default function Home() {
               className={styles.articleSection}
             >
               {ARTICLES.slice(1).map((a) => (
-                <MiniArticle article={a} />
+                <MiniArticle article={a} key={a.name} />
               ))}
             </div>
           )}
