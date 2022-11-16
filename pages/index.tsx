@@ -34,18 +34,20 @@ export default function Home() {
           >
             <MainArticle article={ARTICLES[0]} />
           </div>
-          <div
-            style={{
-              width: `${ARTICLES.length == 1 ? '' : '5'}0%`,
-              padding: '2rem',
-              paddingLeft: '1rem',
-            }}
-            className={styles.articleSection}
-          >
-            {ARTICLES.slice(1).map((a) => (
-              <MiniArticle article={a} />
-            ))}
-          </div>
+          {ARTICLES.length == 1 ? null : (
+            <div
+              style={{
+                width: '50%',
+                padding: '2rem',
+                paddingLeft: '1rem',
+              }}
+              className={styles.articleSection}
+            >
+              {ARTICLES.slice(1).map((a) => (
+                <MiniArticle article={a} />
+              ))}
+            </div>
+          )}
         </div>
       </main>
     </div>
