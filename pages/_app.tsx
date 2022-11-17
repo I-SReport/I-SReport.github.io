@@ -23,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
           name='keywords'
           content='Issaquah, Sammamish, News, Report, The I-S Report, I-S, I-S Report'
         />
+        <link rel='apple-touch-icon' href='/icons/icon-152x152.png'></link>
 
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#000000' />
