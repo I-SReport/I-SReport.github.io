@@ -64,9 +64,12 @@ export default function ArticlePage(props: { articleName: string }) {
     inner = (
       <>
         <h2 style={{ marginTop: 0 }}>{articleData.name}</h2>
-        <h4 style={{ marginTop: 0, color: 'grey' }}>
+        <h4 style={{ marginTop: 0, marginBottom: 0, color: 'grey' }}>
           By: {articleData.author}
         </h4>
+        <h5 style={{ marginTop: 0, color: 'grey', fontStyle: 'italic' }}>
+          {articleData.date}
+        </h5>
         <ReactMarkdown
           children={data}
           remarkPlugins={[remarkGfm]}

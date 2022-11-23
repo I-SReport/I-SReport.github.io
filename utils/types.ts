@@ -4,4 +4,5 @@ export interface Article {
   brief: string;
   image: string;
   author: string;
+  date: string;
 }

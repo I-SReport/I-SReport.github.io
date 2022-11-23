@@ -4,13 +4,15 @@
     "content": "i90-speed-limit",
     "brief": "The city of Issaquah recently announced an update to the speed limit on I-90 to counteract continual failure to meet ticket quotas.",
     "image": "/article_images/i90-speed-limit/map.png",
-    "author": "Derek Leeman"
+    "author": "Derek Leeman",
+    "date": "November 16th, 2022"
   },
   {
     "name": "Puget Sound Energy displays new method to reduce power strain on generators",
     "content": "pse",
     "brief": "In a now-deleted tweet they unveiled a possibly controversial method to stop the issues with generator strain.",
     "image": "/article_images/pse/tweet.jpg",
-    "author": "Derek Leeman"
+    "author": "Derek Leeman",
+    "date": "November 9th, 2022"
   }
 ]
