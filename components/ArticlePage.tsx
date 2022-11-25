@@ -5,6 +5,7 @@ import ARTICLES from '../data/articles.json';
 import { Article } from '../utils/types';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkSuperSub from 'remark-supersub';
 
 const fetcher = (url: string) =>
   fetch(url).then((res) => {
@@ -72,7 +73,7 @@ export default function ArticlePage(props: { articleName: string }) {
         </h5>
         <ReactMarkdown
           children={data}
-          remarkPlugins={[remarkGfm]}
+          remarkPlugins={[remarkGfm, remarkSuperSub]}
           components={{
             img({ node, className, children, ...props }) {
               return (
@@ -93,6 +94,13 @@ export default function ArticlePage(props: { articleName: string }) {
                   />
                   {props.alt}
                 </div>
+              );
+            },
+            a({ node, children, ...props }) {
+              return (
+                <a style={{ color: '#0070f3' }} {...props}>
+                  {children}
+                </a>
               );
             },
           }}
