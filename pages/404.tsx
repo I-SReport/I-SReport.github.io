@@ -9,7 +9,7 @@ export default function Page404() {
   const [path, setPath] = useState<string[]>([]);
 
   useEffect(() => {
-    setPath(router.asPath.split('/').slice(1));
+    setPath(router.asPath.split('?')[0].split('/').slice(1));
   }, [router]);
 
   // Dynamic routing but cursed
