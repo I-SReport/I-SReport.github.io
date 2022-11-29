@@ -118,7 +118,9 @@ export default function ArticlePage(props: { articleName: string }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{articleData ? articleData.name : 'Loading...'}</title>
+        <title>
+          {error ? 'Not found' : articleData ? articleData.name : 'Loading...'}
+        </title>
         <meta
           name='description'
           content='The Issaquah-Sammamish Report - "The truth is among us"'
