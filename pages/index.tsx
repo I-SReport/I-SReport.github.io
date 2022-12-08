@@ -3,8 +3,20 @@ import styles from '../styles/Home.module.css';
 import MainArticle from '../components/MainArticle';
 import ARTICLES from '../data/articles.json';
 import MiniArticle from '../components/MiniArticle';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const ARTICLE_VIEW = 5;
+  const router = useRouter();
+  let offset = parseInt(router.query.offset as string);
+  offset = isNaN(offset) ? 0 : offset;
+  const articleSlice = ARTICLES.slice(
+    offset * ARTICLE_VIEW,
+    (offset + 1) * ARTICLE_VIEW
+  );
+
+  console.log(articleSlice, offset);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -25,16 +37,16 @@ export default function Home() {
         <div className={styles.articleList}>
           <div
             style={{
-              width: `${ARTICLES.length == 1 ? '10' : '5'}0%`,
+              width: `${articleSlice.length == 1 ? '10' : '5'}0%`,
               padding: '2rem',
               paddingRight: '1rem',
               borderTop: '0 !important',
             }}
             className={styles.articleSection}
           >
-            <MainArticle article={ARTICLES[0]} />
+            {articleSlice[0] && <MainArticle article={articleSlice[0]} />}
           </div>
-          {ARTICLES.length == 1 ? null : (
+          {articleSlice.length == 1 ? null : (
             <div
               style={{
                 width: '50%',
@@ -43,12 +55,39 @@ export default function Home() {
               }}
               className={styles.articleSection}
             >
-              {ARTICLES.slice(1).map((a) => (
+              {articleSlice.slice(1).map((a) => (
                 <MiniArticle article={a} key={a.name} />
               ))}
             </div>
           )}
         </div>
+        {ARTICLES.length <= ARTICLE_VIEW ? null : (
+          <div
+            style={{
+              display: 'flex',
+              width: '100%',
+              justifyContent: 'center',
+              fontStyle: 'bold',
+            }}
+          >
+            {offset == 0 ? null : (
+              <a
+                href={`/${
+                  offset != 1 && ARTICLES.length - offset * ARTICLE_VIEW > 1
+                    ? `?offset=${offset - 1}`
+                    : ''
+                }`}
+              >
+                <div className={styles.card}>{'<'}</div>
+              </a>
+            )}
+            {ARTICLES.length - offset * ARTICLE_VIEW <= ARTICLE_VIEW ? null : (
+              <a href={`?offset=${offset + 1}`}>
+                <div className={styles.card}>{'>'}</div>
+              </a>
+            )}
+          </div>
+        )}
       </main>
     </div>
   );
