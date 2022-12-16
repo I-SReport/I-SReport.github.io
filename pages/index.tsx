@@ -15,8 +15,6 @@ export default function Home() {
     (offset + 1) * ARTICLE_VIEW
   );
 
-  console.log(articleSlice, offset);
-
   return (
     <div className={styles.container}>
       <Head>
