@@ -1,0 +1,11 @@
+UNITED STATES—Throughout the economic downturn in the United States, the people of Issaquah and Sammamish have been pulling through the struggle and working to maintain their livelihoods. Be it through the extensive Costo gas station lines, or the extreme prices of gas elsewhere, we have been working hard through the rampant inflation which has affected all of us. However, as the new year is coming we need to start thinking of new and creative solutions, as this problem does not seem to be going anywhere any time soon.
+
+![Image depicting extremely high gas prices in the United States](/article_images/opinion-child-labor/gas.jpg)
+
+It is my opinion, therefore, that we must turn to compete with manufacturing in other countries, such as China. Building upon the great intellects of before, such as Dr. Jonathan Swift: I say that we must legalize unpaid child labor across the United States.
+
+My solution covers myriad problems; let us start with the economic downturn across the United States. What I have done works on many levels to combat the rampant inflation occurring across our country. Firstly, by keeping children out of schools we reduce the number of our tax dollars going there, which ultimately helps as the schools spend it on things nobody needs. Moreover, with the manufacturing boost given by the students we will be able to get out of this rampant inflation with the hard work of the students.
+
+Along with this, we can work on the characters of students, students will be able to develop a good work ethic and will not have to worry or cram for college. One may wonder if the conditions in factories and other such places which will employ these students will be inadequate for their health. To this, I state that those students, especially in Issaquah and Sammamish, already know how to deal with the unneeded and unhealthy increase in work if they miss a day. Others may wonder about college, and the work that students already put in to get there; the people who state this, however, forget a very simple truth: most students are not going to get into the college they want anyways.
+
+I hope that my "modest" (as some may call it) proposal has left an impression in your mind, and I know that it is the solution that shall help us all through the times we are living in.
