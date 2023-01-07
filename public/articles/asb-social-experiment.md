@@ -1,6 +1,6 @@
 SAMMAMISH—On January 6th, members of the Skyline High School Associated Student Body (ASB) received a shocking email. Skyline High School officially stated, "Thank you for participating in the Associated Student Body social experiment. You may now return to your normal student functions."
 
-These developments have one question: why did Skyline create the ASB? The statement answers this question: "The Associated Student Body was an experiment to see if students would attempt to act under the illusions of freedom." Many students were not surprised to learn about the futility of the ASB. "We all knew the truth, some realized they knew, and some did not," stated an anonymous ASB member.
+These developments have one question: why did Skyline create the ASB? The statement answers this question: "The Associated Student Body was an experiment to see if and how students would act under the illusions of freedom." Many students were not surprised to learn about the futility of the ASB. "We all knew the truth, some realized they knew, and some did not," stated an anonymous ASB member.
 
 The email further explains the findings of the study conducted by Skyline High School and their conclusions which led them to shut down ASB:
 
