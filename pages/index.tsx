@@ -71,7 +71,7 @@ export default function Home() {
             {offset == 0 ? null : (
               <a
                 href={`/${
-                  offset != 1 && ARTICLES.length - offset * ARTICLE_VIEW > 1
+                  offset != 1 && ARTICLES.length - offset * ARTICLE_VIEW > 0
                     ? `?offset=${offset - 1}`
                     : ''
                 }`}
