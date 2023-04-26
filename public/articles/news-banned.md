@@ -1,0 +1,16 @@
+On January 21st, 2023, reports flooded in from various countries regarding a ban on the reputable news association _The Issaquah-Sammamish Report_. Said reports described various issues with viewing and distributing articles published by the esteemed journalists of _The Issaquah-Sammamish Report_. For example, in Burundi, one anonymous citizen reportedly lost access to the internet and was fined the equivalent of twenty 19th-century American dollars. Another case in Cyprus reported a similar situation, mentioning the issuance of a fine and a loss in internet connection lasting half a nundine.
+
+However, these cases were the mildest among those reported. The most severe report was in France, where our sources show evidence of military despotism. Our reporter Derek Leeman was able to travel to capture the opinions of those most severely affected by the ban.
+
+![Banned content screen](/article_images/news-banned/content-blocked.png)
+
+Leeman met with Monsieur Bambou, a real estate agent living in Vichy. “It was dreadful,” replied Bambou when asked about the few moments after the ban. “The first thing I noticed was that I couldn’t access my favorite website directly. So I used mobile data to access the website,” Bambou elaborated. “But the second I was on the site, I heard my son say that we lost the internet connection.” After further investigating this issue, Bambou found that the connection was lost. The next day, Bambou also witnessed several French police officers towing his car; however, according to Bambou, the officers “later surrendered as the car was too big to be towed.”
+
+The case of Bambou, among others, represents a collaborative global effort to outlaw the distribution of _The Issaquah-Sammamish Report_. By suppressing _The Issaquah-Sammamish Report_, France has violated its guarantee of freedom of the press. However, other countries affected do not have such virtuous laws, so their oppressive actions are legal, albeit universally inexcusable.
+
+It is important to note that these oppressive actions were not without fierce resistance. The day after the unofficial ban, protests erupted across France in prominent cities, including Vichy, Paris, and Marseille. However, the French government did not codify the suppression of _The Issaquah-Sammamish Report_, so the protesters were protesting nothing.
+
+The most effective way to rebel against unofficial government policy is not public protest; private resistance is far more fruitful for disobeying unofficial government policy.
+In the modern day, virtual private networks (VPNs) allow users to mask their original location and operate a device as if they are in a different country, among other functions. In this situation, virtual private networks could “change” one’s location to a country that permits _The Issaquah-Sammamish Report_. The VPN that does this best is NordVPN. NordVPN provides an easy-to-use interface that makes it absurdly easy to “change” countries and is also offered at a relatively low price, making it feasible for use in second-world and third-world countries.
+
+Our analysts predict that if 50% of the affected population used NordVPN, _The Issaquah-Sammamish Report_ would be able to continue its quest to delight readers in various parts of the world.
