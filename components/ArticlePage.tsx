@@ -103,6 +103,9 @@ export default function ArticlePage(props: { articleName: string }) {
                 </a>
               );
             },
+            code({ node, children, ...props }) {
+              return <code style={{ whiteSpace: "pre-wrap" }} {...props}>{children}</code>
+            }
           }}
         />
         <a
