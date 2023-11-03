@@ -31,20 +31,28 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
 
       <footer className={styles.footer}>
-        <span>© {year}</span>
-        <span style={{ textAlign: "center" }}>
-          <a
-            href="/important"
-            style={{
-              color: "grey",
-              textDecoration: "underline",
-              fontStyle: "italic",
-            }}
-          >
-            Important Info
-          </a>
+        <span style={{ width: "100%" }}>© {year}</span>
+        <span
+          style={{
+            width: "100%",
+            textAlign: "center",
+            color: "grey",
+            textDecoration: "underline",
+            fontStyle: "italic",
+          }}
+        >
+          <a href="/important">Important Info</a>
         </span>
-        <span style={{ opacity: 0.75, fontSize: "75%" }}>{footerCaption}</span>
+        <span
+          style={{
+            width: "100%",
+            opacity: 0.75,
+            textAlign: "right",
+            fontSize: "75%",
+          }}
+        >
+          {footerCaption}
+        </span>
       </footer>
     </>
   );
